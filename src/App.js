@@ -1,24 +1,22 @@
 import './App.css';
-import Card from './components/Card.jsx';
-import Cards from './components/Cards.jsx';
-import SearchBar from './components/SearchBar.jsx';
-import characters, { Rick } from './data.js';
+import Cards from './components/Card/Cards.jsx';
+import SearchBar from './components/SearchBar/SearchBar.jsx';
+import StarsOverlay from './components/Background/Stars/StarOverlay.jsx';
+import NavBar from './components/NavBar/NavBar.jsx';
+import Background from './components/Background/Background.jsx';
+import Planets from './components/Background/Planets/Planets.jsx';
+import characters from './data.js';
 
 function App() {
    return (
       <div className='App'>
+         {/* <NavBar /> */}
+         <Background />
+         
+         <StarsOverlay />
+         <Planets />
          <SearchBar onSearch={(characterID) => window.alert(characterID)} />
          <Cards characters={characters} />
-         <Card
-            id={Rick.id}
-            name={Rick.name}
-            status={Rick.status}
-            species={Rick.species}
-            gender={Rick.gender}
-            origin={Rick.origin.name}
-            image={Rick.image}
-            onClose={() => window.alert('Emulamos que se cierra la card')}
-         />
       </div>
    );
 }
