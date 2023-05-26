@@ -27,8 +27,8 @@
     position: absolute;
     display: block;
     list-style: none;
-    width: 40px;
-    height: 40px;
+    width: 75px;
+    height: 75px;
     animation: animate 25s linear infinite;
     bottom: -150px;
 }
@@ -87,8 +87,8 @@
 
 .elements img:nth-child(8){
     left: 50%;
-    width: 45px;
-    height: 45px;
+    width: 60px;
+    height: 60px;
     animation-delay: 15s;
     animation-duration: 45s;
 }
@@ -121,7 +121,7 @@
 
     100%{
         transform: translateY(-1000px) rotate(720deg);
-        opacity: 0;
+        opacity: 0.2;
         border-radius: 50%;
     }
 

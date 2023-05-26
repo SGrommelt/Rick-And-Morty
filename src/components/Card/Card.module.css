@@ -1,8 +1,9 @@
 .cardsContainer {
     white-space: normal;
-    margin: 70px 0px;
+    margin: 70px 0px 0px 40px;
     padding-bottom: 10px;
     display: inline-block;
+    max-width: 90%;
 }
 
 .cardItem{
