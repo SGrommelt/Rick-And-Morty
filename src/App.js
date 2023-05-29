@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
+import { Route, Routes} from 'react-router-dom';
 import Cards from './components/Card/Cards.jsx';
 import NavBar from './components/NavBar/NavBar.jsx';
 import Background from './components/Background/Background.jsx';
+import About from './components/About/About.jsx';
+import Detail from './components/Detail/Detail.jsx'
 import axios from 'axios';
 
 function App() {
@@ -27,7 +30,13 @@ function App() {
       <div className='App'>
          <NavBar onSearch={onSearch} />
          <Background />
-         <Cards characters={characters} onClose={onClose}/>
+         <Routes>
+            <Route path="/home" element ={
+               <Cards characters={characters} onClose={onClose}/>
+            }/>
+            <Route path="/about" element={<About />} />
+            <Route path="/detail/:id" element={<Detail />} />
+         </Routes>
       </div>
    );
 }
