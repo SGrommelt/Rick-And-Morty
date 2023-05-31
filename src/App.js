@@ -6,6 +6,7 @@ import NavBar from './components/NavBar/NavBar.jsx';
 import Background from './components/Background/Background.jsx';
 import About from './components/About/About.jsx';
 import Detail from './components/Detail/Detail.jsx'
+import Favorites from './components/Favorites/Favorites.jsx'
 import axios from 'axios';
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
             }/>
             <Route path="/about" element={<About />} />
             <Route path="/detail/:id" element={<Detail />} />
+            <Route path="/favorites" element={<Favorites />} />
          </Routes>
       </div>
    );

@@ -167,3 +167,16 @@
 .cardItem:hover .cardItemButton {
     opacity: 1;
 }
+
+.cardFavoriteButton {
+    font-family: 'Bungee Hairline', cursive;
+    font-size: 25px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 2;
+    border: none;
+    line-height: 1;
+    opacity: 1;
+    transition: all 1s;
+}
