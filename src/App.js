@@ -16,11 +16,14 @@ function App() {
    const [characters, setCharacters] = useState([]);
 
    function onSearch(id) {
+      const characterId= characters.filter(character => character.id === Number(id));
+      if (characterId.length) return alert("The character already exists!");
+      if (id < 1 || id > 826 ) return alert("There is no character with the entered id!")
       axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
          if (data.name) {
             setCharacters((oldChars) => [...oldChars, data]);
          } else {
-            window.alert('¡No hay personajes con este ID!');
+            window.alert("There is no character with the entered id!");
          }
       });
    }
