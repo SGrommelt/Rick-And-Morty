@@ -3,7 +3,8 @@
     margin: 70px 0px 0px 40px;
     padding-bottom: 10px;
     display: inline-block;
-    max-width: 90%;
+    /* max-width: 70%; */
+    white-space: nowrap;
 }
 
 .cardItem{
@@ -13,8 +14,8 @@
     background-color: #ffffff;
     overflow: hidden;
     /* margin-right: 25px; */
-    margin-right: 80px;
-    margin-top: 70px;
+    margin-right: 90px;
+    margin-top: 80px;
     display: inline-block;
     cursor: pointer;
     -webkit-transition: 1000ms all;
