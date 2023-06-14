@@ -20,12 +20,22 @@ export default function Detail() {
       return setCharacter({});
    }, [id]);
 
+   const nameLength = (name) => {
+      if(name!== undefined) {
+         if(name.length > 12) {
+            if(name.length > 24) return "characterNameSmaller";
+            return "characterNameSmall";
+         }
+         return "characterName";
+      }
+   }
+
    return (
       <div className={styles.background}>
             {character ? <>
                <div className={styles.container}>
                <div className={styles.nameContainer}>
-                  <h2 className={styles.characterName}>{character.name}</h2>
+                  <h2 className={styles[nameLength(character.name)]}>{character.name}</h2>
                </div>
                <div className={styles.detailsContainer}>
                <h2 className={styles.details}>{"-> Status: "}<span>{character.status}</span></h2>

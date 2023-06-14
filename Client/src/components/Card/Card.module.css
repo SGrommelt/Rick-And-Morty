@@ -124,6 +124,7 @@
     box-shadow: 1.5px 1.5px 1.5px 1.5px  rgba(255, 255, 255, 0.37);
     transform: translateX(-120%);
     transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    white-space: initial;
 }
 
 .cardItem:hover .cardItemDetails {

@@ -39,6 +39,20 @@
     color: black;
 }
 
+.container:hover .characterNameSmall {
+    font-size: 51px;
+    letter-spacing: 6px;
+    -webkit-text-stroke: 1px #ffffff;
+    color: black;
+}
+
+.container:hover .characterNameSmaller {
+    font-size: 47px;
+    letter-spacing: 6px;
+    -webkit-text-stroke: 1px #ffffff;
+    color: black;
+}
+
 .container:hover .details {
     font-size: 17px;
     line-height: 2.3;
@@ -84,6 +98,28 @@
     font-family: 'Creepster', cursive;
     color: white;
     font-size: 65px;
+    /* -webkit-text-stroke: 1px #ffffffd2; */
+    /* text-shadow: 4px 4px 4px rgb(255, 255, 255); */
+    transform: scale(1, 1.7);
+    letter-spacing: 4px;
+    transition: 1s;
+}
+
+.characterNameSmall {
+    font-family: 'Creepster', cursive;
+    color: white;
+    font-size: 49px;
+    /* -webkit-text-stroke: 1px #ffffffd2; */
+    /* text-shadow: 4px 4px 4px rgb(255, 255, 255); */
+    transform: scale(1, 1.7);
+    letter-spacing: 4px;
+    transition: 1s;
+}
+
+.characterNameSmaller {
+    font-family: 'Creepster', cursive;
+    color: white;
+    font-size: 45px;
     /* -webkit-text-stroke: 1px #ffffffd2; */
     /* text-shadow: 4px 4px 4px rgb(255, 255, 255); */
     transform: scale(1, 1.7);

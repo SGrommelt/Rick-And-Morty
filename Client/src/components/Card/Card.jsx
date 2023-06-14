@@ -26,6 +26,18 @@ function Card(props) {
       });
    }, [props.allCharacters, props.id]);
 
+   const nameLength = (name) => {
+      const arr = name.split(" ");
+      if(arr !== undefined) {
+         if(arr[1]) {
+            const shortName = arr[0] + " " + arr[1];
+            if(shortName.length > 12) return arr[0];
+            else return shortName;
+         }
+      }
+      return name;
+   }
+
    return (
       <div className={styles.cardItem}>
          {
@@ -43,7 +55,7 @@ function Card(props) {
             {props.onClose ? <button className={styles.cardItemButton} onClick={() => props.onClose(props.id)}>X</button> : null }
          </div>
          <div className={styles.cardItemName}>
-            <span className={styles.cardItemNameText}>{props.name}</span>
+            <span className={styles.cardItemNameText}>{nameLength(props.name)}</span>
          </div>
          <Link to={`/detail/${props.id}`}>
             <div className={styles.cardItemDetailsContainer}>
