@@ -1,5 +1,5 @@
 import styles from "./Favorites.module.css";
-import Card from "../Card/Card.jsx"
+
 import { orderCards, filterCards } from "../../redux/actions";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
@@ -37,16 +37,22 @@ function Favorites(props) {
         <option value="unknown">unknown</option>
       </select>
       {
-      props.myFavorites.map(favorite => 
-          <Card key={favorite.id}
-          id={favorite.id}
-          name={favorite.name}
-          status={favorite.status}
-          species={favorite.species}
-          gender={favorite.gender}
-          origin={favorite.origin.name}
-          image={favorite.image}
-          />
+          props.myFavorites.map(favorite =>
+            <div className={styles.cardsContainer}>
+              <div className={styles.cardItem}>
+                <div className={styles.cardItemName}>
+                    <span className={styles.cardItemNameText}>{props.name}</span>
+                </div>
+                    <div className={styles.cardItemDetailsContainer}>
+                      <div className={styles.cardItemDetails}>
+                          <h2 className={styles.cardItemDetailsText}>{"-> Name: "}<span>{favorite.name}</span></h2>
+                          <h2 className={styles.cardItemDetailsText}>{"-> Status: "}<span>{favorite.status}</span></h2>
+                          <h2 className={styles.cardItemDetailsText}>{"-> Species: "}<span>{favorite.species}</span></h2>
+                      </div>
+                    </div>
+                <img className={styles.cardItem__img} src={favorite.image} alt='' />
+              </div>
+            </div>
           )
       }
     </div>

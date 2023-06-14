@@ -30,9 +30,13 @@ function Card(props) {
       <div className={styles.cardItem}>
          {
             isFav ? (
-               <button className={styles.cardFavoriteButton} onClick={handleFavorite}>❤️</button>
+               <button className={styles.cardFavoriteButton} onClick={handleFavorite}>
+                  <img className={styles.favoritesIcon} src={require("../../img/Favorites/Favorite2.png")} alt="" />
+               </button>
             ) : (
-               <button className={styles.cardFavoriteButton} onClick={handleFavorite}>🤍</button>
+               <button className={styles.cardFavoriteButton} onClick={handleFavorite}>
+                  <img className={styles.favoritesIcon} src={require("../../img/Favorites/Favorite1.png")} alt="" />
+               </button>
             )
          }
          <div>
@@ -44,10 +48,9 @@ function Card(props) {
          <Link to={`/detail/${props.id}`}>
             <div className={styles.cardItemDetailsContainer}>
                <div className={styles.cardItemDetails}>
+                  <h2 className={styles.cardItemDetailsText}>{"-> Name: "}<span>{props.name}</span></h2>
                   <h2 className={styles.cardItemDetailsText}>{"-> Status: "}<span>{props.status}</span></h2>
                   <h2 className={styles.cardItemDetailsText}>{"-> Species: "}<span>{props.species}</span></h2>
-                  <h2 className={styles.cardItemDetailsText}>{"-> Gender: "}<span>{props.gender}</span></h2>
-                  <h2 className={styles.cardItemDetailsText}>{"-> Origin: "}<span>{props.origin}</span></h2>
                </div>
             </div>
          </Link>

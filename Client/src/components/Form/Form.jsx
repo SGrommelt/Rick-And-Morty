@@ -31,7 +31,8 @@ export default function Form(props) {
 
     return (
         <div className={styles.background}>
-            <img className ={styles.backgroundImg} src={require("../../img/Login.png")} alt="" />
+            <FormBG />
+            {/* <img className ={styles.backgroundImg} src={require("../../img/Login.png")} alt="" /> */}
             <div className={styles.formWrapper}>
                 <form className ={styles.form} onSubmit={handleSubmit} >
                     {/* <label>EMAIL</label> */}
