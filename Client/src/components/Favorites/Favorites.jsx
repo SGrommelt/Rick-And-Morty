@@ -24,18 +24,20 @@ function Favorites(props) {
 
   return (
     <div className={styles.background}>
-      <h1>Favorites</h1>
-      <select name="order" onChange={handleOrder}>
-        <option value="A">Ascendent</option>
-        <option value="D">Descendent</option>
-      </select>
-      <select name="filter" onChange={handleFilter}>
-        <option value="All">All</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-        <option value="Genderless">Genderless</option>
-        <option value="unknown">unknown</option>
-      </select>
+      {/* <h1>Favorites</h1> */}
+      <div className={styles.filtersContainer}> 
+        <select name="order" className={styles.dropDown} onChange={handleOrder}>
+          <option className={styles.option} value="A">Ascendent</option>
+          <option className={styles.option} value="D">Descendent</option>
+        </select>
+        <select name="filter" className={styles.dropDown} onChange={handleFilter}>
+          <option className={styles.option} value="All">All</option>
+          <option className={styles.option} value="Male">Male</option>
+          <option className={styles.option} value="Female">Female</option>
+          <option className={styles.option} value="Genderless">Genderless</option>
+          <option className={styles.option} value="unknown">unknown</option>
+        </select>
+        </div> 
       {
           props.myFavorites.map(favorite =>
             <div className={styles.cardsContainer}>
