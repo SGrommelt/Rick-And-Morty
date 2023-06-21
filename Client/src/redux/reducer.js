@@ -2,25 +2,32 @@ import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from "./types";
 
 const initialState = {
     myFavorites: [],
-    allCharacters: []
+    allCharacters: [],
+    errors: false,
 }
 
 const reducer = (state = initialState, action) => {
     switch(action.type) {
-        case 'ADD_FAV': {
+        case ADD_FAV: {
             return { 
                 ...state, 
                 myFavorites: action.payload,
-                allCharacters: action.payload 
+                allCharacters: action.payload,
+                errors: false 
             }
         }
-        case 'REMOVE_FAV': {
+        case REMOVE_FAV: {
             return {
                 ...state,
                 myFavorites: action.payload,
-                allCharacters: action.payload 
+                allCharacters: action.payload,
+                errors: false, 
             }
         }
+        case "ERROR":
+            return {
+                ...state, errors: action.payload
+            }
         case FILTER:
             if(action.payload === "All") return {...state, myFavorites: state.allCharacters}
             const allCharactersCopyFilter = [...state.allCharacters];
