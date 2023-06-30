@@ -28,19 +28,20 @@ An app that displays characters of the Rick & Morty animated series. The charact
 
 **Login**
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+<img src="./img/LoginGIF.gif" alt="" width="384" height="216" />
 
 **Search Characters**
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+<img src="./img/SearchGIF.gif" alt="" />
 
 **Favorites**
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+<img src="./img/FavoritesGIF.gif" alt="" />
 
 **Character Detail**
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+<img src="./img/DetailGIF.gif" alt="" width="384" height="216" />
+
 ## Installation
 
 1.- Clone the repo.
