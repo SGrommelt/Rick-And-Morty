@@ -57,22 +57,22 @@ An app that displays characters of the Rick & Morty animated series. The charact
   npm install
 ```
 
-3.- From the main folder, move to "source" directory and install dependencies.
+3.- From the main folder, move to "server" directory and install dependencies.
 
 ```bash
   cd server
   npm install
 ```
 
-4.- Create a local database named "rickandmorty". Create a .env file in the "src" folder inside the source directory and add the following code:
+4.- Create a local database named "rickandmorty". Create a .env file inside the "server" directory and add the following information:
 
 ```bash
-    DB_USER= // Insert username here
-    DB_PASSWORD= // Insert password here
+    DB_USER= // Your postgres username here
+    DB_PASSWORD= // Your postgres password here
     DB_HOST=localhost
 ```
 
-5.- Run npm start in the terminal, located at the "source" directory. Next, run this command again located in the "client" directory.
+5.- Run npm start in the terminal, located at the "server" directory. Next, run the same command again this time located in the "client" directory.
 
 ```bash
     npm start
